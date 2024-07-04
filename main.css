@@ -1,0 +1,64 @@
+body {
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+  color: #002033;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.header {
+  margin-bottom: 50px;
+  background-color: #0071b2;
+}
+
+.title__name {
+  color: #ffffff;
+}
+
+
+.table-header-item, .table-row-item  {
+  font-size: 12px;
+}
+
+
+
+.nav-item a{
+  color: #ffffff;
+}
+
+.nav-item a.active{
+  font-weight: 700;
+}
+
+.nav-item a:hover{
+  color: #002033;
+}
+
+.user__name  {
+  color: #ffffff;
+}
+
+.user__status  {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.bi {
+  font-size: 20px;
+  color: #002033;
+}
+
+.bi:hover {
+  font-size: 20px;
+  color: #0071b2;
+}
+
+.col-25 {
+  -ms-flex: 0 0 4%;
+  flex: 0 0 4%;
+  max-width: 4%;
+}
+
