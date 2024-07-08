@@ -1,7 +1,83 @@
+:root {
+  --color-bg-default: #fff; /* Базовый (основной) цвет фона */
+  --color-bg-secondary: #ecf1f4; /* Дополнительный (второстепенный) цвет фона */
+  --color-bg-brand: #0071b2; /* Цвет фона для брендовых блоков */
+  --color-bg-link: #0078d2; /* Цвет фона для ссылочных или CTA блоков */
+  --color-bg-ghost: rgba(0,32,51,.08); /* Полупрозрачный цвет для дополнительного выделения или разделения блоков или секций. Обычно используется поверх основных фонов (default или secondary) */
+  --color-bg-stripe: rgba(0,32,51,.05); /* Цвет для едва заметного разделения, например чтобы разделить строки в таблицах */
+  --color-bg-border: rgba(0,65,102,.2); /* Цвет большинства бордеров и тонких разделителей */
+  --color-bg-tone: rgba(0,32,51,.85); /* Тёмный цвет подложки (оверлея) под высплывающими окнами */
+  --color-bg-soft: hsla(0,0%,100%,.9); /* Светлый цвет подложки (оверлея) под высплывающими окнами */
+  --color-bg-normal: #56b9f2; /* Цвет фона для блоков, сообщающих об нормальном (нейтральном) состоянии системы */
+  --color-bg-success: #22c38e; /* Цвет фона для блоков, сообщающих об успешном действии/статусе */
+  --color-bg-caution: #f2c94c; /* Цвет фона для блоков, сообщающих об осторожном действии/статусе */
+  --color-bg-warning: #f38b00; /* Цвет фона для блоков, сообщающих об предупреждающем действии/статусе */
+  --color-bg-alert: #eb5757; /* Цвет фона для блоков, сообщающих об опасном (ошибочном) действии/статусе */
+  --color-bg-critical: #33000f; /* Цвет фона для блоков, сообщающих об критичном действии/статусе */
+  --color-typo-primary: #002033; /* Основной текст */
+  --color-typo-secondary: rgba(0,32,51,.6); /* Второстепенный текст */
+  --color-typo-brand: #0071b2; /* Брендовый текст */
+  --color-typo-ghost: rgba(0,32,51,.3); /* Третьестепенный текст */
+  --color-typo-link: #0078d2; /* Ссылка */
+  --color-typo-link-hover: #008efa; /* При наведении на ссылку */
+}
+
+html,body {
+  height: 100%;
+}
+
 body {
   min-width: 320px;
   font-family: 'Roboto', sans-serif;
-  color: #002033;
+  color: var(--color-typo-primary);
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main.main {
+  flex: 1 1 auto;
+}
+
+.border-start {
+  border-left: 1px solid var(--color-bg-border) !important;
+}
+
+.border-top {
+  border-left: 1px solid var(--color-bg-border) !important;
+}
+
+.border-end {
+  border-left: 1px solid var(--color-bg-border) !important;
+}
+
+.border-bottom {
+  border-left: 1px solid var(--color-bg-border) !important;
+}
+
+.col-004 {
+  -ms-flex: 0 0 4%;
+  flex: 0 0 4%;
+  max-width: 4%;
+}
+
+.col-005 {
+  -ms-flex: 0 0 5%;
+  flex: 0 0 5%;
+  max-width: 5%;
+}
+
+/*------------------------------------- HEADER -------------------------------------*/
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header-first-row {
+  background-color: var(--color-bg-brand);
 }
 
 .logo {
@@ -9,24 +85,12 @@ body {
   height: 32px;
 }
 
-.header {
-  margin-bottom: 50px;
-  background-color: #0071b2;
-}
-
 .title__name {
-  color: #ffffff;
+  color: var(--color-bg-default);
 }
-
-
-.table-header-item, .table-row-item  {
-  font-size: 12px;
-}
-
-
 
 .nav-item a{
-  color: #ffffff;
+  color: var(--color-bg-default);
 }
 
 .nav-item a.active{
@@ -34,31 +98,91 @@ body {
 }
 
 .nav-item a:hover{
-  color: #002033;
+  color: var(--color-typo-primary);
 }
 
 .user__name  {
-  color: #ffffff;
+  color: var(--color-bg-default);
 }
 
 .user__status  {
-  color: #ffffff;
+  color: var(--color-bg-default);
   font-size: 12px;
 }
 
-.bi {
-  font-size: 20px;
-  color: #002033;
+.bi-box-arrow-right {
+  font-size: 24px;
+  color: var(--color-bg-default);
+  
 }
 
-.bi:hover {
-  font-size: 20px;
-  color: #0071b2;
+.bi-box-arrow-right:hover {
+  color: var(--color-typo-primary);
 }
 
-.col-25 {
-  -ms-flex: 0 0 4%;
-  flex: 0 0 4%;
-  max-width: 4%;
+.logout {
+  border-left: 1px solid var(--color-bg-default);
+}
+
+.header-second-row {
+  border-bottom: 1px solid var(--color-bg-brand);
+}
+
+.btn-add-equipment {
+  color: var(--color-bg-brand);
+  border: 1px solid var(--color-bg-brand);
+  transition: all 0.3s;
+}
+
+.btn-add-equipment:hover {
+  color: var(--color-bg-default);
+  background-color: var(--color-bg-brand);
+  transition: all 0.3s;
+}
+
+/*------------------------------------- MAIN -------------------------------------*/
+
+.equipment-header-item {
+  font-weight: 500;
+}
+
+.bi-window, .bi-arrow-up-right-square {
+  font-size: 20px;
+  color: var(--color-typo-primary);
+}
+
+.bi-window:hover, .bi-arrow-up-right-square:hover {
+  color: var(--color-typo-link-hover);
+}
+
+
+.accordion, .accordion-header, .accordion-item, .accordion-body, .accordion-button, .--bs-accordion-border-radius, .--bs-accordion-inner-border-radius {
+  border-radius: 0% !important; 
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-typo-brand)
+}
+
+.equipment-header-item, .equipment-item  {
+  font-size: 12px;
+}
+
+.equipment-item-row:hover div,{
+  background-color: var(--color-bg-stripe);
+}
+
+
+
+/*------------------------------------- FOOTER -------------------------------------*/
+
+.footer {
+  background-color: var(--color-bg-default);
+  border-top: 1px solid var(--color-bg-border)
 }
 
