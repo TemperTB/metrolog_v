@@ -42,20 +42,24 @@ main.main {
   flex: 1 1 auto;
 }
 
+.border {
+  border: 1px solid var(--color-bg-border) !important;
+}
+
 .border-start {
   border-left: 1px solid var(--color-bg-border) !important;
 }
 
 .border-top {
-  border-left: 1px solid var(--color-bg-border) !important;
+  border-top: 1px solid var(--color-bg-border) !important;
 }
 
 .border-end {
-  border-left: 1px solid var(--color-bg-border) !important;
+  border-right: 1px solid var(--color-bg-border) !important;
 }
 
 .border-bottom {
-  border-left: 1px solid var(--color-bg-border) !important;
+  border-bottom: 1px solid var(--color-bg-border) !important;
 }
 
 .col-004 {
@@ -68,6 +72,11 @@ main.main {
   -ms-flex: 0 0 5%;
   flex: 0 0 5%;
   max-width: 5%;
+}
+
+input[readonly]
+{
+    color: rgba(0,32,51,.6);
 }
 
 /*------------------------------------- HEADER -------------------------------------*/
@@ -140,6 +149,7 @@ main.main {
   transition: all 0.3s;
 }
 
+
 /*------------------------------------- MAIN -------------------------------------*/
 
 .equipment-header-item {
@@ -157,7 +167,7 @@ main.main {
 
 
 .accordion, .accordion-header, .accordion-item, .accordion-body, .accordion-button, .--bs-accordion-border-radius, .--bs-accordion-inner-border-radius {
-  border-radius: 0% !important; 
+  color: var(--color-typo-primary);
 }
 
 .accordion-button:focus {

@@ -279,7 +279,9 @@
                                     class="equipment-item d-flex justify-content-center align-items-center h-100 px-1 text-break"
                                   >
                                     <div class="equipment-row-modal">
-                                      <a href="#"><i class="bi bi-window me-2"></i></a>
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#equipment_id_1"
+                                        ><i class="bi bi-window me-2"></i
+                                      ></a>
                                     </div>
                                     <div class="equipment-row-window">
                                       <a href="#"><i class="bi bi-arrow-up-right-square"></i></a>
@@ -307,6 +309,168 @@
           </div>
         </div>
       </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div
+      class="modal fade modal-lg"
+      id="equipment_id_1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="equipment_id_1_label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="equipment_id_1_label">Средство измерения</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+
+          <form>
+            <div class="modal-body">
+              <div class="accordion accordion-flush border-start border-end border-top" id="accordion-general-information">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button p-2 ps-4 pe-2"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordion-general-information-collapse"
+                      aria-expanded="false"
+                      aria-controls="accordion-general-information-collapse"
+                    >
+                      Общая информация<span class="accordeon-general-information-span">Вот это дела</span>
+                    </button>
+                  </h2>
+                  <div id="accordion-general-information-collapse" class="accordion-collapse collapse p-2 show">
+                    <div class="accordion-body p-0">
+                      <div class="row">
+                        <label for="proizvodzstvo" class="col-sm-3 col-form-label">Производство:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" readonly class="form-control-plaintext" id="proizvodzstvo" value="ПТВС-2"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="preo" class="col-sm-3 col-form-label">ПрЭО:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" readonly class="form-control-plaintext" id="preo" value="Холмогорнефть"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="zakazchik" class="col-sm-3 col-form-label">Заказчик:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" readonly class="form-control-plaintext" id="zakazchik" value='АО "Ноябрьскнефтегаз"'/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="napr" class="col-sm-3 col-form-label">Направление:</label>
+                        <div class="col-sm-9">
+                          <input type="text" readonly class="form-control-plaintext" id="napr" value="Теплоэнергетика"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion accordion-flush border-start border-end border-top" id="accordion-location">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button p-2 ps-4 pe-2"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordion-location-collapse"
+                      aria-expanded="true"
+                      aria-controls="accordion-location-collapse"
+                    >
+                      Расположение
+                    </button>
+                  </h2>
+                  <div id="accordion-location-collapse" class="accordion-collapse collapse p-2 show">
+                    <div class="accordion-body p-0">
+                      <div class="row">
+                        <label for="mestorozhdenie" class="col-sm-3 col-form-label">Месторождение:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" class="form-control" id="mestorozhdenie" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="territoriya" class="col-sm-3 col-form-label">Территория:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" class="form-control" id="territoriya" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="object" class="col-sm-3 col-form-label">Объект:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" class="form-control" id="object" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="mestopolozhenie" class="col-sm-3 col-form-label">Местоположение:</label>
+                        <div class="col-sm-9 mb-2">
+                          <input type="text" class="form-control" id="mestopolozhenie" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="commentariy" class="col-sm-3 col-form-label">Комментарий:</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="commentariy" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <fieldset class="row mb-3 border-bottom">
+                <label for="type" class="col-sm-3 col-form-label">Тип СИ:</label>
+                <div class="col-sm-9 mb-2">
+                  <input type="text" class="form-control" id="type" />
+                </div>
+                <label for="gos-nomer" class="col-sm-3 col-form-label">Гос. номер:</label>
+                <div class="col-sm-9 mb-2">
+                  <input type="text" class="form-control" id="gos-nomer" />
+                </div>
+                <label for="model" class="col-sm-3 col-form-label">Модель:</label>
+                <div class="col-sm-9 mb-2">
+                  <input type="text" class="form-control" id="model" />
+                </div>
+                <label for="mezhInterval" class="col-sm-3 col-form-label">Меж. интервал (лет):</label>
+                <div class="col-sm-9 mb-2">
+                  <input type="text" class="form-control" id="mezhInterval" />
+                </div>
+              </fieldset>
+              <fieldset class="row mb-3 border-bottom">
+                <label for="zavNumber" class="col-sm-4 col-form-label">Заводской номер:</label>
+                <div class="col-sm-8 mb-2">
+                  <input type="text" class="form-control" id="zavNumber" />
+                </div>
+                <label for="date_before" class="col-sm-4 col-form-label">Дата предыдущей поверки:</label>
+                <div class="col-sm-8 mb-2">
+                  <input type="text" class="form-control" id="date_before" />
+                </div>
+                <label for="date_next" class="col-sm-4 col-form-label">Дата следующей поверки:</label>
+                <div class="col-sm-8 mb-2">
+                  <input type="text" class="form-control" id="date_next" />
+                </div>
+                <label for="svidNumber" class="col-sm-4 col-form-label">Номер cв-ва о регистрации:</label>
+                <div class="col-sm-8 mb-2">
+                  <input type="text" class="form-control" id="svidNumber" />
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Сохранить</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script
