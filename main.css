@@ -163,6 +163,7 @@ input[readonly]
 
 .bi-window:hover, .bi-arrow-up-right-square:hover {
   color: var(--color-typo-link-hover);
+  transition: all 0.3s;
 }
 
 
@@ -174,7 +175,18 @@ input[readonly]
   box-shadow: none;
 }
 
+/*TODO надо оно или нет? */
+.accordion-button-ptvs:not(.collapsed), .accordion-button-mestorozhdenie:not(.collapsed) {
+  border-top: 1px solid var(--color-bg-border);
+  border-bottom: 1px solid var(--color-bg-border);
+  color: var(--color-typo-brand);
+}
+
 .accordion-button:not(.collapsed) {
+  color: var(--color-typo-brand);
+}
+
+.accordion-button {
   background-color: var(--color-bg-secondary);
   color: var(--color-typo-brand)
 }
@@ -188,7 +200,68 @@ input[readonly]
 }
 
 
+/*------------------------------------- MODAL WINDOW -------------------------------------*/
+.modal-status select:disabled {
+  font-weight: 400;
+  color: var(--color-bg-success);
+  background-image: none;
+  background-color: var(--color-bg-default);
+}
 
+.modal-status--work{
+  border: 3px solid var(--color-bg-success);
+}
+
+.accordeon-general-information-span,
+.accordeon-accessory-span, .accordeon-location-information-span,
+.accordeon-location-span, .accordeon-type-span, .accordeon-calibration-span {
+  color: var(--color-typo-secondary);
+}
+
+a.form-control-plaintext{
+  color: var(--color-typo-secondary);
+}
+
+.modal-open-new-window__link img {
+  color: red;
+}
+
+.modal-open-new-window {
+  width: 32px;
+  height: 32px;
+}
+
+.modal-open-new-window__link i{
+  font-size: 32px;
+  color: var(--color-typo-secondary);
+}
+
+.btn-secondary {
+  background-color: var(--color-typo-secondary);
+  border-width: 2px;
+}
+
+.btn-secondary:hover {
+  color: var(--color-typo-secondary);
+  background-color: var(--color-bg-default);
+  border-color: var(--color-typo-secondary);
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--color-typo-brand);
+  border-color: var(--color-bg-brand);
+  border-width: 2px;
+}
+
+.btn-primary:hover {
+  color: var(--color-typo-brand);
+  background-color: var(--color-bg-default);
+  border-color: var(--color-bg-brand);
+  font-weight: 400;
+  transition: all 0.3s;
+}
 /*------------------------------------- FOOTER -------------------------------------*/
 
 .footer {
