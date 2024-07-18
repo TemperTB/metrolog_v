@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Метрология</title>
     <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,8 +22,10 @@
   </head>
   <body>
     <div class="wrapper">
+      <!--   header   -->
       <header class="header sticky-top">
         <div class="container-fluid">
+          <!--   header first row   -->
           <div class="header-first-row row align-items-center">
             <div class="col-2">
               <div class="name">
@@ -62,13 +64,15 @@
               </div>
             </div>
           </div>
+
+          <!--   header second row   -->
           <div class="header-second-row row align-items-center">
             <div class="col-12 p-0">
               <div class="add-equipment">
                 <nav class="navbar">
-                  <form class="container-fluid justify-content-center">
-                    <button class="btn btn-add-equipment" type="button">Добавить оборудование</button>
-                  </form>
+                  <div class="container-fluid justify-content-center">
+                    <a class="btn btn-add-equipment" href="new-equipment.html" target="_blank">Добавить оборудование</a>
+                  </div>
                 </nav>
               </div>
             </div>
@@ -76,8 +80,11 @@
         </div>
       </header>
 
+      <!--   main   -->
       <main class="main">
+        <!--   equipment   -->
         <div class="equipment">
+          <!--   accordion ptvs   -->
           <div class="accordion accordion-flush" id="accordion-PTVS1">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -94,6 +101,7 @@
               </h2>
               <div id="accordion-PTVS1-Collapse" class="accordion-collapse collapse">
                 <div class="accordion-body p-0">
+                  <!--   accordion mestorozhdenie   -->
                   <div class="accordion accordion-flush" id="accordion-PTVS1-Karamovskoe">
                     <div class="accordion-item">
                       <h2 class="accordion-header">
@@ -110,8 +118,10 @@
                       </h2>
                       <div id="accordion-PTVS1-Karamovskoe-Collapse" class="accordion-collapse collapse">
                         <div class="accordion-body p-0">
+                          <!--   equipments   -->
                           <div class="equipment-items mt-2">
                             <div class="container-fluid text-center">
+                              <!--   equipments header   -->
                               <div class="equipment-header-row row align-items-stretch mb-2">
                                 <div class="col px-0 border-start d-none">
                                   <div
@@ -196,6 +206,8 @@
                                   ></div>
                                 </div>
                               </div>
+
+                              <!--   equipment   -->
                               <div class="equipment-item-row row align-items-stretch mb-2">
                                 <div class="col px-0 d-none">
                                   <div
@@ -302,6 +314,7 @@
         </div>
       </main>
 
+      <!--   footer   -->
       <footer class="footer sticky-bottom">
         <div class="container-fluid">
           <div class="row align-items-center text-center">
@@ -311,7 +324,7 @@
       </footer>
     </div>
 
-    <!-- Модальное окно -->
+    <!-- modal windows (equipment) -->
     <div
       class="modal fade modal-lg"
       id="equipment_id_1"
@@ -333,8 +346,8 @@
               <!-- Строка состояния -->
               <div class="container-fluid text-center">
                 <div class="row mb-2 justify-content-between">
-                  <div class="modal-status col-sm-3 p-0 pt-1">
-                    <select class="form-select modal-status--work" aria-label="Состояние оборудования" disabled>
+                  <div class="modal-status col-sm-4 p-0 pt-1">
+                    <select class="form-select modal-status--work" aria-label="Статус оборудования" disabled>
                       <option value="0" selected>В работе</option>
                       <option value="1">ЗИП</option>
                       <option value="2">Неисправен</option>
@@ -343,7 +356,7 @@
                   </div>
                   <div class="modal-open-new-window col-sm-1 align-self-top p-0">
                     <a href="#" class="modal-open-new-window__link">
-                      <i class="bi bi-arrow-up-right-square"></i> 
+                      <i class="bi bi-arrow-up-right-square"></i>
                     </a>
                   </div>
                 </div>
@@ -382,13 +395,7 @@
                       <div class="row">
                         <label for="model" class="col-sm-4 col-form-label">Модель:</label>
                         <div class="col-sm-8">
-                          <input
-                            type="text"
-                            readonly
-                            class="form-control-plaintext"
-                            id="model"
-                            value="ЭГМ-1"
-                          />
+                          <input type="text" readonly class="form-control-plaintext" id="model" value="ЭГМ-1" />
                         </div>
                       </div>
                       <div class="row">

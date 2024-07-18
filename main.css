@@ -269,3 +269,19 @@ a.form-control-plaintext{
   border-top: 1px solid var(--color-bg-border)
 }
 
+/*------------------------------------- NEW EQUIPMENT -------------------------------------*/
+
+.new-equipment__container {
+  max-width: 768px;
+}
+
+.equipment-status__select:focus {
+  box-shadow: none;
+}
+
+.new-equipment__category {
+  background-color: var(--color-bg-secondary);
+  margin: 0 10px;
+  padding: 6px 24px;
+  color: var(--color-typo-brand);
+}
