@@ -106,7 +106,7 @@ input[readonly]
   font-weight: 700;
 }
 
-.nav-item a:hover{
+.nav-item a:hover, .nav-item a:focus{
   color: var(--color-typo-primary);
 }
 
@@ -137,16 +137,35 @@ input[readonly]
   border-bottom: 1px solid var(--color-bg-brand);
 }
 
+.add-equipment {
+  border: 1px solid var(--color-bg-brand);
+  border-radius: var(--bs-border-radius);
+}
 .btn-add-equipment {
   color: var(--color-bg-brand);
-  border: 1px solid var(--color-bg-brand);
   transition: all 0.3s;
+  border: none;
+  border-radius: 0;
 }
 
-.btn-add-equipment:hover {
+.btn-add-equipment-new-window {
+  line-height: 30px;
+  padding: 2px 8px;
+  color: var(--color-bg-brand);
+  transition: all 0.3s;
+  border: none;
+  border-radius: 0;3
+  line-height: 30px;
+}
+
+.btn-add-equipment:hover, .btn-add-equipment-new-window:hover {
   color: var(--color-bg-default);
   background-color: var(--color-bg-brand);
   transition: all 0.3s;
+}
+
+.bi-open-new-equipment-new-window{
+  font-size: 20px;
 }
 
 
@@ -156,12 +175,12 @@ input[readonly]
   font-weight: 500;
 }
 
-.bi-window, .bi-arrow-up-right-square {
+.bi-open-equipment-modal, .bi-open-equipment-new-window {
   font-size: 20px;
   color: var(--color-typo-primary);
 }
 
-.bi-window:hover, .bi-arrow-up-right-square:hover {
+.bi-open-equipment-modal:hover, .bi-open-equipment-new-window:hover {
   color: var(--color-typo-link-hover);
   transition: all 0.3s;
 }
@@ -249,7 +268,7 @@ a.form-control-plaintext{
   transition: all 0.3s;
 }
 
-.btn-primary {
+.btn:first-child:active, .btn-primary, .btn-primary:active {
   background-color: var(--color-typo-brand);
   border-color: var(--color-bg-brand);
   border-width: 2px;
@@ -271,7 +290,7 @@ a.form-control-plaintext{
 
 /*------------------------------------- NEW EQUIPMENT -------------------------------------*/
 
-.new-equipment__container {
+.equipment__container {
   max-width: 768px;
 }
 
@@ -279,9 +298,25 @@ a.form-control-plaintext{
   box-shadow: none;
 }
 
-.new-equipment__category {
+.equipment__category {
   background-color: var(--color-bg-secondary);
   margin: 0 10px;
   padding: 6px 24px;
   color: var(--color-typo-brand);
 }
+
+.form-select:focus, .form-control:focus {
+  border-color: var(--color-bg-normal);
+  box-shadow: none;
+}
+
+a.form-control {
+  background-color: var(--bs-secondary-bg);
+}
+
+a.form-control:focus {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    box-shadow: none;
+    background-color: var(--bs-secondary-bg);
+}
+

@@ -66,14 +66,15 @@
           </div>
 
           <!--   header second row   -->
-          <div class="header-second-row row align-items-center">
-            <div class="col-12 p-0">
-              <div class="add-equipment">
-                <nav class="navbar">
-                  <div class="container-fluid justify-content-center">
-                    <a class="btn btn-add-equipment" href="new-equipment.html" target="_blank">Добавить оборудование</a>
-                  </div>
-                </nav>
+          <div class="header-second-row row justify-content-center">
+            <div class="col-auto p-2">
+              <div class="add-equipment d-flex">
+                <a class="btn btn-add-equipment" href="new-equipment.html">Добавить оборудование</a>
+                <div class="align-items-center">
+                  <a class="btn btn-add-equipment-new-window" href="new-equipment.html" target="_blank"
+                    ><i class="bi bi-arrow-up-right-square bi-open-new-equipment-new-window"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
@@ -292,11 +293,13 @@
                                   >
                                     <div class="equipment-row-modal">
                                       <a href="#" data-bs-toggle="modal" data-bs-target="#equipment_id_1"
-                                        ><i class="bi bi-window me-2"></i
+                                        ><i class="bi bi-window bi-open-equipment-modal me-2"></i
                                       ></a>
                                     </div>
                                     <div class="equipment-row-window">
-                                      <a href="#"><i class="bi bi-arrow-up-right-square"></i></a>
+                                      <a href="#"
+                                        ><i class="bi bi-arrow-up-right-square bi-open-equipment-new-window"></i
+                                      ></a>
                                     </div>
                                   </div>
                                 </div>
@@ -554,15 +557,9 @@
                         </div>
                       </div>
                       <div class="row">
-                        <label for="commentariy" class="col-sm-4 col-form-label">Комментарий:</label>
+                        <label for="comment" class="col-sm-4 col-form-label">Комментарий:</label>
                         <div class="col-sm-8">
-                          <input
-                            type="text"
-                            readonly
-                            class="form-control-plaintext"
-                            id="commentariy"
-                            value="Датчик CH4"
-                          />
+                          <input type="text" readonly class="form-control-plaintext" id="comment" value="Датчик CH4" />
                         </div>
                       </div>
                     </div>
@@ -706,7 +703,7 @@
             </div>
 
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Редактировать</button>
+              <button type="button" class="btn btn-primary">Редактировать</button>
               <button type="submit" class="btn btn-primary d-none">Сохранить</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
             </div>
