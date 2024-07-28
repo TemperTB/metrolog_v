@@ -171,9 +171,6 @@ input[readonly]
 
 /*------------------------------------- MAIN -------------------------------------*/
 
-.equipment-header-item {
-  font-weight: 500;
-}
 
 .bi-open-equipment-modal, .bi-open-equipment-new-window {
   font-size: 20px;
@@ -210,24 +207,55 @@ input[readonly]
   color: var(--color-typo-brand)
 }
 
-.equipment-header-item, .equipment-item  {
+.equipment-table {
   font-size: 12px;
+  color: var(--color-typo-primary);
 }
 
-.equipment-item-row:hover div,{
-  background-color: var(--color-bg-stripe);
+.equipment-table th{
+  color: var(--color-typo-primary);
+  font-weight: 500;
+}
+
+.equipment-table td{
+  color: var(--color-typo-primary);
+}
+
+.table-hover {
+  background-color: #fff;
+}
+
+.equipment-table tr{
+  border-top: none;
+  border-bottom: none;
+  border-left-color: var(--color-bg-border);
+  border-right-color: var(--color-bg-border);
+}
+
+.equipment-table td:first-child, .equipment-table th:first-child{
+  border-left: none;
+}
+
+.equipment-table td:last-child, .equipment-table th:last-child{
+  border-right: none;
 }
 
 
 /*------------------------------------- MODAL WINDOW -------------------------------------*/
-.modal-status select:disabled {
+.equipment-status select:disabled {
   font-weight: 400;
   color: var(--color-bg-success);
   background-image: none;
   background-color: var(--color-bg-default);
 }
 
-.modal-status--work{
+.equipment-status select {
+  font-weight: 400;
+  background-color: var(--color-bg-default);
+}
+
+
+.form-select.equipment-status--work, .form-select.equipment-status--work:focus{
   border: 3px solid var(--color-bg-success);
 }
 
@@ -253,6 +281,10 @@ a.form-control-plaintext{
 .modal-open-new-window__link i{
   font-size: 32px;
   color: var(--color-typo-secondary);
+}
+
+.modal-open-new-window__link:hover {
+  color: var(--color-typo-link);
 }
 
 .btn-secondary {
@@ -281,6 +313,8 @@ a.form-control-plaintext{
   font-weight: 400;
   transition: all 0.3s;
 }
+
+
 /*------------------------------------- FOOTER -------------------------------------*/
 
 .footer {
@@ -320,3 +354,38 @@ a.form-control:focus {
     background-color: var(--bs-secondary-bg);
 }
 
+/*------------------------------------- LOGIN -------------------------------------*/
+
+
+.btn-primary.dropdown-toggle {
+  border: none;
+  padding: 4px 12px;
+}
+
+.btn-primary.dropdown-toggle:hover {
+  background-color: var(  --color-bg-default);
+  color: var(--color-typo-brand);
+  transition: all 0.3s;
+}
+
+.btn.dropdown-toggle.show {
+  background-color: var(--color-typo-brand);
+  color: var(  --color-bg-default);
+  border: none;
+}
+
+.btn:focus-visible {
+  background-color: var(--color-typo-brand);
+  color: var(  --color-bg-default);
+  border: none;
+  box-shadow: none;
+}
+
+form.dropdown-menu.show {
+  transform: translate(0px, 50px) !important;
+}
+
+:not(.btn-check)+.btn:active {
+  background-color: var(--color-typo-brand);
+  border-color: var(--color-typo-brand);
+}

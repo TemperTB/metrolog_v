@@ -50,17 +50,34 @@
                 </ul>
               </div>
             </div>
-            <div class="col-1">
-              <div class="user p-1">
-                <div class="user__name">Кригер А.В.</div>
-                <div class="user__status">Администратор</div>
-              </div>
-            </div>
-            <div class="col-005 p-0">
-              <div class="logout">
-                <div class="equipment-header-item d-flex justify-content-center align-items-center h-100 px-1">
-                  <a href="#"><i class="bi bi-box-arrow-right"></i></a>
-                </div>
+            <div class="col-2">
+              <div class="dropdown d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-primary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-bs-auto-close="outside"
+                >
+                  Войти
+                </button>
+                <form class="dropdown-menu p-4">
+                  <div class="mb-3">
+                    <label for="userLogin" class="form-label fs-6">Имя пользователя</label>
+                    <input type="text" class="form-control" id="userLogin" placeholder="Ivanov.IA" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="userPassword" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="userPassword" placeholder="Password" />
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
+                      <label class="form-check-label" for="dropdownCheck2"> Запомнить меня </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
               </div>
             </div>
           </div>
@@ -73,13 +90,12 @@
         <div class="container equipment__container border-start border-end p-3">
           <form class="new-equipment">
             <div class="row">
-              <h1 class="fs-5 pt-3 pb-3">Новое оборудование</h1>
+              <h1 class="fs-5 pt-3 pb-3">Манометр электроконтактный / ЭГМ-1 / 12893128939812</h1>
             </div>
             <div class="row mb-3">
               <div class="equipment-status col-sm-4 pt-1">
-                <select class="form-select equipment-status__select" aria-label="Статус оборудования">
-                  <option value="0" disabled selected hidden>Выберите статус</option>
-                  <option value="0">В работе</option>
+                <select class="form-select equipment-status--work" aria-label="Статус оборудования">
+                  <option value="0" selected>В работе</option>
                   <option value="1">ЗИП</option>
                   <option value="2">Неисправен</option>
                   <option value="3">Демонтирован</option>
@@ -95,13 +111,20 @@
               <div class="row mb-2">
                 <label for="model" class="col-sm-4 col-form-label">Модель:</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" required id="model" />
+                  <input type="text" class="form-control-plaintext" readonly id="model" value="ЭГМ-1" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="serialNumber" class="col-sm-4 col-form-label">Заводской номер:</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" required id="serialNumber" />
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="serialNumber"
+                    value="12893128939812"
+                  />
                 </div>
               </div>
             </div>
@@ -114,63 +137,46 @@
               <div class="row mb-2">
                 <label for="category" class="col-sm-4 col-form-label">Категория:</label>
                 <div class="col-sm-8">
-                  <!-- TODO как сделать так чтобы disabled selected hidden был другого цвета -->
-                  <select class="form-select is-invalid" aria-label="Категория оборудования" id="category" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">Теплоэнергетика</option>
-                    <option value="1">Генерация</option>
-                    <option value="2">Диагностика</option>
-                    <option value="3">Электроэнергетика</option>
-                  </select>
-                  <div class="valid-feedback">Все хорошо!</div>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="category"
+                    value="Теплоэнергетика"
+                  />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="proizvodzstvo" class="col-sm-4 col-form-label">Производство:</label>
                 <div class="col-sm-8">
-                  <select class="form-select is-valid" aria-label="Производство" id="proizvodzstvo" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">ПТВС-1</option>
-                    <option value="1">ПТВС-2</option>
-                    <option value="2">ПТВС-4</option>
-                    <option value="3">ПТВС-5</option>
-                    <option value="4">ЦТВС</option>
-                    <option value="5">ПТВС-7</option>
-                    <option value="6">УТВС «Меретояха»</option>
-                    <option value="7">УТВС «Чаянда»</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="proizvodzstvo"
+                    value="ПТВС-1"
+                  />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="preo" class="col-sm-4 col-form-label">ПрЭО:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="ПрЭО" id="preo" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">«Востокнефть»</option>
-                    <option value="1">«Муравленковскнефть»</option>
-                    <option value="2">«Оренбургнефть»</option>
-                    <option value="3">«Приобскнефть»</option>
-                    <option value="4">«Тюмень»</option>
-                    <option value="5">«Холмогорнефть»</option>
-                    <option value="6">«Ямал»</option>
-                  </select>
+                  <input type="text" class="form-control-plaintext" readonly required id="preo" value="Холмогорнефть" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="zakazchik" class="col-sm-4 col-form-label">Заказчик:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Заказчик" id="zakazchik" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">АО «Газпромнефть-Ноябрьскнефтегаз»</option>
-                    <option value="1">ООО «Газпромнефть-Восток»</option>
-                    <option value="2">ООО «Газпромнефть-Заполярье»</option>
-                    <option value="3">ООО «Газпромнефть-Оренбург»</option>
-                    <option value="4">ООО «Газпромнефть-Развитие»</option>
-                    <option value="5">ООО «Газпромнефть-Хантос»</option>
-                    <option value="6">ООО «Газпромнефть-Энергосистемы»</option>
-                    <option value="7">ООО «Газпромнефть-Ямал»</option>
-                    <option value="8">ООО «Меретояханефтегаз»</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="zakazchik"
+                    value="АО «Газпромнефть-Ноябрьскнефтегаз»"
+                  />
                 </div>
               </div>
             </div>
@@ -183,67 +189,45 @@
               <div class="row mb-2">
                 <label for="mestorozhdenie" class="col-sm-4 col-form-label">Месторождение:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Месторождение" id="mestorozhdenie" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">Романовское</option>
-                    <option value="1">Муравленковское</option>
-                    <option value="2">Сугмутское</option>
-                    <option value="3">Суторминское</option>
-                    <option value="4">Вынгаяхинское</option>
-                    <option value="5">Еты-Пуровское</option>
-                    <option value="6">промзона г. Муравленко</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="mestorozhdenie"
+                    value="Карамовское"
+                  />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="territoriya" class="col-sm-4 col-form-label">Территория:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Территория" id="territoriya" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">ДНС-1</option>
-                    <option value="1">ДНС-2</option>
-                    <option value="2">ДНС с УПСВ</option>
-                    <option value="3">ДНС</option>
-                    <option value="4">УПН</option>
-                    <option value="5">ЦПС</option>
-                    <option value="6">УКПГ</option>
-                  </select>
+                  <input type="text" class="form-control-plaintext" readonly required id="territoriya" value="ДНС" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="object" class="col-sm-4 col-form-label">Объект:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Объект" id="territoriya" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">Котельная</option>
-                    <option value="1">Водоподготовка</option>
-                    <option value="2">Станция обезжелезивания</option>
-                    <option value="3">Станция биоочистки</option>
-                    <option value="4">Канализационно-очистные сооружения</option>
-                    <option value="5">ИТП</option>
-                    <option value="6">Арт. скважина</option>
-                  </select>
+                  <input type="text" class="form-control-plaintext" readonly required id="object" value="Котельная" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="mestopolozhenie" class="col-sm-4 col-form-label">Местоположение:</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Местоположение" id="mestopolozhenie" required>
-                    <option value="" disabled selected hidden></option>
-                    <option value="0">Котел №1</option>
-                    <option value="1">Котел №2</option>
-                    <option value="2">Котел №2</option>
-                    <option value="3">Общекотельная автоматика</option>
-                    <option value="4">ГРУ</option>
-                    <option value="5">ГРП</option>
-                    <option value="6">-</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control-plaintext"
+                    readonly
+                    required
+                    id="mestopolozhenie"
+                    value="Общекотельное оборудование"
+                  />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="comment" class="col-sm-4 col-form-label">Комментарий:</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="comment" value="" />
+                  <input type="text" class="form-control-plaintext" readonly required id="comment" value="Датчик CH4" />
                 </div>
               </div>
             </div>
@@ -258,10 +242,10 @@
                 <div class="col-sm-8">
                   <input
                     type="text"
-                    class="form-control"
-                    disabled
-                    id="typeSI"
+                    class="form-control-plaintext"
+                    readonly
                     required
+                    id="comment"
                     value="Манометр электроконтактный"
                   />
                 </div>
@@ -269,7 +253,9 @@
               <div class="row mb-2">
                 <label for="numberSI" class="col-sm-4 col-form-label">Номер в госреестре:</label>
                 <div class="col-sm-8">
-                  <a class="form-control" id="numberSI" target="_blank" href="https://www.google.ru">1778-63</a>
+                  <a class="form-control-plaintext" id="numberSI" target="_blank" href="https://www.google.ru"
+                    >1778-63</a
+                  >
                 </div>
               </div>
               <div class="row mb-2">
@@ -277,8 +263,9 @@
                 <div class="col-sm-8">
                   <input
                     type="text"
-                    class="form-control"
-                    disabled
+                    class="form-control-plaintext"
+                    readonly
+                    required
                     id="designationSI"
                     value="ОБМ1-100, ОБМ1-100б, ОБМ1-100бф, ОБМГн1-100б, МОШ1-100"
                   />
@@ -287,7 +274,7 @@
               <div class="row mb-2">
                 <label for="intervalSI" class="col-sm-4 col-form-label">Меж. интервал (лет):</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" disabled id="intervalSI" value="2" />
+                  <input type="text" class="form-control-plaintext" readonly required id="intervalSI" value="2" />
                 </div>
               </div>
             </div>
@@ -300,19 +287,25 @@
               <div class="row mb-2">
                 <label for="prevDate" class="col-sm-4 col-form-label">Дата предыдущей поверки:</label>
                 <div class="col-sm-8">
-                  <input type="date" class="form-control" id="prevDate" required value="" />
+                  <input type="date" class="form-control" required id="prevDate" value="2020-07-01" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="nextDate" class="col-sm-4 col-form-label">Дата следующей поверки:</label>
                 <div class="col-sm-8">
-                  <input type="date" class="form-control" id="nextDate" required value="" />
+                  <input type="date" class="form-control" required id="nextDate" value="2024-07-01" />
                 </div>
               </div>
               <div class="row mb-2">
                 <label for="certificateNumber" class="col-sm-4 col-form-label">Номер cв-ва о регистрации:</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="certificateNumber" required value="" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    required
+                    id="certificateNumber"
+                    value="С-ВБМ/16-07-2024/354703498"
+                  />
                 </div>
               </div>
             </div>
