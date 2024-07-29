@@ -54,29 +54,41 @@
               <div class="dropdown d-flex justify-content-end">
                 <button
                   type="button"
-                  class="btn btn-primary dropdown-toggle"
+                  class="btn btn-primary dropdown-toggle user-login-button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   data-bs-auto-close="outside"
                 >
                   Войти
                 </button>
-                <form class="dropdown-menu p-4">
-                  <div class="mb-3">
-                    <label for="userLogin" class="form-label fs-6">Имя пользователя</label>
-                    <input type="text" class="form-control" id="userLogin" placeholder="Ivanov.IA" />
+                <form class="dropdown-menu p-4 user-login-form">
+                  <div class="mb-3 user-login-form__login user-login-username">
+                    <label for="userLogin" class="form-label fs-6 user-login-username__label">Имя пользователя</label>
+                    <input
+                      type="text"
+                      class="form-control user-login-username__input"
+                      id="userLogin"
+                      placeholder="Ivanov.IA"
+                    />
                   </div>
-                  <div class="mb-3">
-                    <label for="userPassword" class="form-label">Пароль</label>
-                    <input type="password" class="form-control" id="userPassword" placeholder="Password" />
+                  <div class="mb-3 user-login-form__password user-login-password">
+                    <label for="userPassword" class="form-label user-password__label">Пароль</label>
+                    <input
+                      type="password"
+                      class="form-control user-password__input"
+                      id="userPassword"
+                      placeholder="Password"
+                    />
                   </div>
-                  <div class="mb-3">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
-                      <label class="form-check-label" for="dropdownCheck2"> Запомнить меня </label>
+                  <div class="mb-3 user-login-form__is-memory user-login-is-memory">
+                    <div class="form-check user-login-is-memory__checkbox">
+                      <input type="checkbox" class="form-check-input user-login-is-memory__input" id="dropdownCheck2" />
+                      <label class="form-check-label user-login-is-memory__label" for="dropdownCheck2">
+                        Запомнить меня
+                      </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Войти</button>
+                  <button type="submit" class="btn btn-primary user-login-enter">Войти</button>
                 </form>
               </div>
             </div>
